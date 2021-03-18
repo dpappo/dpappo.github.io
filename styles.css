@@ -39,7 +39,7 @@ h2.subtitle{
   margin-right: 5%;
 }
 
-button{
+input{
   border-radius: 115px;
   color: #0E6D76;
   border: 1px solid #0E6D76;
@@ -51,7 +51,7 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+input:hover{
   transition: 0.3s;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -63,18 +63,18 @@ button:hover{
 
 }
 
-button.work{
+input.work{
   /* margin-left: 7%; */
   background: #EEF6F9;
 }
-button.work:hover{
+input.work:hover{
   color:#E0957B;
 }
 
-button.contact{
+input.contact{
   background: #bddfdd;
 }
-button.contact:hover{
+input.contact:hover{
   color:#EEF6F9;
 }
 
@@ -145,13 +145,13 @@ div.right-column{
     margin-right: 0%;
   }
   
-  div.buttons{
+  div.form{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
   }
 
-  button{
+  input{
     border-radius: 115px;
     color: #0E6D76;
     border: 1px solid #0E6D76;
@@ -163,7 +163,7 @@ div.right-column{
     cursor: pointer;
   }
   
-  button:hover{
+  input:hover{
     transition: 0.3s;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -175,18 +175,18 @@ div.right-column{
   
   }
   
-  button.work{
+  input.work{
     /* margin-left: 7%; */
     background: #EEF6F9;
   }
-  button.work:hover{
+  input.work:hover{
     color:#E0957B;
   }
   
-  button.contact{
+  input.contact{
     background: #bddfdd;
   }
-  button.contact:hover{
+  input.contact:hover{
     color:#EEF6F9;
   }
   
@@ -261,13 +261,13 @@ div.right-column{
     margin-right: 0%;
   }
   
-  div.buttons{
+  div.form{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
   }
 
-  button{
+  input{
     border-radius: 115px;
     color: #0E6D76;
     border: 1px solid #0E6D76;
@@ -279,7 +279,7 @@ div.right-column{
     cursor: pointer;
   }
   
-  button:hover{
+  input:hover{
     transition: 0.3s;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -291,18 +291,18 @@ div.right-column{
   
   }
   
-  button.work{
+  input.work{
     /* margin-left: 7%; */
     background: #EEF6F9;
   }
-  button.work:hover{
+  input.work:hover{
     color:#E0957B;
   }
   
-  button.contact{
+  input.contact{
     background: #bddfdd;
   }
-  button.contact:hover{
+  input.contact:hover{
     color:#EEF6F9;
   }
   
