@@ -1,0 +1,288 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin: 0;
+	/* margin-right: 2%; */
+	padding:2px;
+	padding-top: 0;
+	border-width: 0;
+}
+body {
+	-epub-hyphens:auto;
+}
+
+#_idContainer004{
+	margin: 2%;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+div.left-column {
+	width: 100%;
+	align-self: flex-start;
+}
+
+div.right-column {
+	width: 100%;
+	align-self: center;
+}
+
+div.Basic-Text-Frame {
+	border-style:solid;
+}
+p.Basic-Paragraph {
+	color:#000000;
+	font-family:"Adobe Caslon Pro", serif;
+	font-size:11px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.273;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:2px;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+li.Paragraph-Style-1, p.Paragraph-Style-1 {
+	-epub-hyphens:none;
+	color:#000000;
+	font-family:"Adobe Caslon Pro", serif;
+	font-size:14px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.3;
+	margin-bottom:0;
+	margin-left:5px;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Avenir-Headline {
+	color:#000000;
+	font-family:"Avenir Black", sans-serif;
+	font-size:13px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:800;
+	text-decoration:underline;
+	text-transform:uppercase;
+	line-height: 34px;
+}
+span.Avenir-Headline-Red {
+	color:#000000;
+	font-family:"Avenir Black", sans-serif;
+	font-size:13px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:800;
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+span.Headline-- {
+	/* color:#000000; */
+	font-family:"Avenir Black", sans-serif;
+	font-size:22px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:800;
+	text-decoration:underline;
+	text-transform:none;
+}
+span.Hyperlink {
+	color:#215e9e;
+	text-decoration:underline;
+}
+span.Job-Location {
+	color:#000000;
+	font-family:"Avenir Black", sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:800;
+	text-transform:none;
+	line-height: 23px;
+}
+span.Job-Title {
+	color:#000000;
+	font-family:Avenir, sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform:none;
+}
+span.Time---Place {
+	color:#000000;
+	font-family:"Avenir Book", sans-serif;
+	font-size:14px;
+	font-style:italic;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform:none;
+}
+p.ParaOverride-1 {
+	-epub-hyphens:none;
+	margin-left:17px;
+}
+p.ParaOverride-2 {
+	margin-left:17px;
+}
+p.ParaOverride-3 {
+	margin-left:18px;
+}
+p.ParaOverride-4 {
+	-epub-hyphens:none;
+}
+p.ParaOverride-5 {
+	text-align:justify;
+	text-align-last:left;
+	margin-bottom: 15px;
+}
+p.ParaOverride-9 {
+	text-align:justify;
+	text-align-last:left;
+	margin-bottom: 0;
+}
+p.ParaOverride-6 {
+	margin-left:0px;
+}
+p.ParaOverride-7 {
+	-epub-hyphens:none;
+	margin-left:17px;
+	text-align:justify;
+	text-align-last:left;
+}
+li.ParaOverride-8 {
+	list-style-position:outside;
+	list-style-type:disc;
+	margin-left:23px;
+	text-align:justify;
+	text-align-last:left;
+	text-indent:0px;
+}
+span.CharOverride-1 {
+	font-size:21px;
+}
+span.CharOverride-2 {
+	font-size:11px;
+}
+span.CharOverride-3 {
+	font-size:13px;
+}
+span.CharOverride-4 {
+	color:#000000;
+	font-family:"Avenir Black", sans-serif;
+	font-size:11px;
+	font-style:normal;
+	font-weight:800;
+}
+span.CharOverride-5 {
+	color:#000000;
+	font-family:Avenir, sans-serif;
+	font-size:11px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-6 {
+	color:#e04b20;
+	font-size:21px;
+}
+span.CharOverride-7 {
+	color:#000000;
+	font-size:37px;
+}
+span.CharOverride-8 {
+	font-size:14px;
+}
+span.CharOverride-9 {
+	color:#000000;
+	font-size:28px;
+}
+
+
+@media print {
+	header nav, footer, button {
+		display: none;
+		}
+
+		@page { size: auto;  margin: 0mm; }
+}
+
+div.full-container {
+	display: flex;
+	flex-direction: column;
+}
+
+div.lower-row{
+	margin: 2%;
+	display: flex;
+	flex-direction: row;
+}
+
+section.contact{
+	margin-top: 3px;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid;
+	border-radius: 15px;
+	width: 100%;
+}
+
+i {
+	font-size: 1.5em;
+}
+
+div.project-title {
+	margin-top: 0;
+	margin-left: 2%;
+}
+
+a {
+	color: rgb(41, 120, 238);
+}
+
+a:hover{
+	color: rgb(17, 57, 116);
+}
+
+button {
+	vertical-align: bottom;
+	border-radius: 5px;
+	border: 1px solid;
+	cursor: pointer;
+}
+
+button:active {
+	color: white;
+}
+
+p.nav-item{
+	flex-grow: 1;
+	width: 100%;
+	margin: 2px;
+}
+
+@media only screen and (min-width: 1243px) {
+body {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+	
+}
