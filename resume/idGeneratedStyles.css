@@ -20,12 +20,12 @@ body {
 
 div.left-column {
 	width: 100%;
-	align-self: flex-start;
+	align-self: center;
 }
 
 div.right-column {
 	width: 100%;
-	align-self: center;
+	align-self: flex-end;
 }
 
 div.Basic-Text-Frame {
