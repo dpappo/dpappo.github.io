@@ -432,4 +432,13 @@ header {
 		width: 33%;
 		margin: 10px;
 	}
+
+	div.lower-row {
+		flex-direction: column;
+	}
+
+	div.project {
+		margin: 2%;
+	}
+
 }
