@@ -20,7 +20,7 @@ body {
 
 div.left-column {
 	width: 100%;
-	align-self: center;
+	align-self: flex-start;
 }
 
 div.right-column {
