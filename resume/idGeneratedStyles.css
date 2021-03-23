@@ -420,3 +420,15 @@ header {
 .dialog-title {
 	margin-top: 15px;
 }
+
+@media only screen and (max-width: 838px) {
+  section.contact {
+		display: flex;
+    flex-flow: wrap;
+}
+
+	p.nav-item {
+		width: 33%;
+		margin: 10px;
+	}
+}
