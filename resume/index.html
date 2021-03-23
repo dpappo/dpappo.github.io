@@ -211,17 +211,14 @@ closeButton.addEventListener('click', event => {
 });
 
 document.getElementById("sharea").addEventListener("click", event => {
-  console.log("Sharing")
 	if (navigator.share) {
     navigator.share({
       title: "Dan Pappo's Resumé",
       url: 'http://www.danpappo.com/resume'
     }).then(() => {
-      console.log('Thanks for sharing!');
     })
     .catch(console.error);
   } else {
-    console.log("In else")
 		shareDialog.classList.add('is-open');
 
   }
