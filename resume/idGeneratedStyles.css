@@ -217,8 +217,12 @@ span.CharOverride-9 {
 
 
 @media print {
-	header nav, footer, button, #darkmode, .widget {
+	header nav, footer, button, #darkmode, .widget, .hide-on-share {
 		display: none;
+		}
+
+		div.widget {
+			display: none !important;
 		}
 
 		@page { size: auto;  margin: 0mm; }
