@@ -143,7 +143,7 @@ appearance: none;
 div.photo-end{
   width: 350px;
   height: 350px;
-  background-image: url('./images/main.jpg');
+  background-image: url('./images/main.webp');
   border-radius: 50%;
   background-position: top;
   background-size: cover;
@@ -153,7 +153,7 @@ div.photo-end{
 div.photo{
   width: 350px;
   height: 350px;
-  background-image: url('./images/end.jpg');
+  background-image: url('./images/end.webp');
   border-radius: 50%;
   background-position: 45% 6%;
   background-size: 170%;
@@ -321,7 +321,7 @@ appearance: none;
   div.photo{
     width: 250px;
     height: 250px;
-    background-image: url('./images/end.jpg');
+    background-image: url('./images/end.webp');
     border-radius: 50%;
     background-position: 45% 6%;
     background-size: 170%;
@@ -330,7 +330,7 @@ appearance: none;
   div.photo-end{
     width: 250px;
     height: 250px;
-    background-image: url('./images/main.jpg');
+    background-image: url('./images/main.webp');
     border-radius: 50%;
     background-position: top;
     background-size: cover;
@@ -498,7 +498,7 @@ appearance: none;
   div.photo{
     width: 200px;
     height: 200px;
-    background-image: url('./images/end.jpg');
+    background-image: url('./images/end.webp');
     border-radius: 50%;
     background-position: 45% 6%;
     background-size: 170%;
@@ -508,7 +508,7 @@ appearance: none;
   div.photo-end{
     width: 200px;
     height: 200px;
-    background-image: url('./images/main.jpg');
+    background-image: url('./images/main.webp');
     border-radius: 50%;
     background-position: top;
     background-size: cover;
@@ -648,7 +648,7 @@ appearance: none;
       display: block;
       width: 200px;
       height: 200px;
-      background-image: url('./images/end.jpg');
+      background-image: url('./images/end.webp');
       border-radius: 50%;
       background-position: 45% 6%;
       background-size: 170%;
@@ -659,7 +659,7 @@ appearance: none;
       display: block;
       width: 200px;
       height: 200px;
-      background-image: url('./images/main.jpg');
+      background-image: url('./images/main.webp');
       border-radius: 50%;
       background-position: top;
       background-size: cover;
