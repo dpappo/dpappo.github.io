@@ -6,7 +6,7 @@ body {
   overflow: auto;
 }
 html {
-  overflow: hidden;
+  overflow: inherit;
   height: 100%;
 }
 
@@ -191,7 +191,10 @@ img.project-image {
   }
 
   div.project-container {
-    min-height: 60%;
+    min-height: 50%;
+  }
+  div.container {
+    min-height: 50%;
   }
 
   input.work {
@@ -375,13 +378,28 @@ appearance: none;
   div.right-column.Tweeter {
     place-content: space-around;
   }
+  div.left-column.Alfresco {
+    place-content: space-around;
+  }
 
   img.project-image {
     display: none;
   }
 
+  
   p.subtitle {
-    font-size: 1.3em;
+    font-size: 1.1em;
+  }
+
+  input.contact {
+    padding: 10px
+  }
+  input.work {
+    padding: 10px
+  }
+
+  h1#Alfresco {
+    font-size: 2.5em;
   }
 
   div.container{
