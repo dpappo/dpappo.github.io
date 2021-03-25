@@ -61,7 +61,7 @@
 				<div class="targets">
 
 					
-					<a class="button-share" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://danpappo.com/resume">
+					<a class="button-share" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://danpappo.com/resume/">
 						
 							<use href="#linkedin"></use>
 						
@@ -238,5 +238,12 @@ document.getElementById("sharea").addEventListener("click", event => {
 
 
 </script>
+<script type="application/javascript">
+  function getIP(json) {
+    LogRocket.identify(json.ip)
+  }
+</script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 </body>
 </html>
