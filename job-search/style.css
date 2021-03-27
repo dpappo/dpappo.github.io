@@ -1,0 +1,9 @@
+html {
+  overflow: hidden;
+}
+
+div#chart_div {
+  display: block;
+  margin: 0 auto;
+  text-align: -webkit-center;
+}

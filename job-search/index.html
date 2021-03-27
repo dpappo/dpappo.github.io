@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart Testing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
+  <script>window.LogRocket && window.LogRocket.init('ztgzix/job-search');</script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+  <script type="text/javascript">
+
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart() {
+
+      // Create the data table.
+
+      var data = google.visualization.arrayToDataTable([
+        ['Month', 'Job Applications', 'Contacts Messaged', 'Resumé Views', 'Calendly Appointments', 'Emails Received',
+         'Offers', { role: 'annotation' } ],
+        ['March', 14, 4, 3, 1, 1, 0, ''],
+        ['April', 0, 0, 0, 0, 0, 0, ''],
+        ['May', 0, 0, 0, 0, 0, 0, '']
+      ]);
+
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      // Set chart options
+      var options = {
+        title: "Dan's Job Search Progress",
+        width: 1000,
+        height: 800,
+        bar: {groupWidth: "95%"},
+        legend: {position: 'top', maxLines: 3},
+        isStacked: "true",
+        colors: ['#0f6d76', '#85c4be', '#eef6f9', '#feddd3', '#e0957b', "black"]
+      };
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script>
+
+<script type="application/javascript">
+  function getIP(json) {
+    LogRocket.identify(json.ip)
+  }
+</script>
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</head>
+<body>
+  <div id="chart_div"></div>
+</body>
+</html>
