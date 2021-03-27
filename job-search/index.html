@@ -10,55 +10,78 @@
   <script>window.LogRocket && window.LogRocket.init('ztgzix/job-search');</script>
   <script src="https://apis.google.com/js/auth.js?onload=init"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 
   <script type="text/javascript">
 
-    // Load the Visualization API and the corechart package.
-    google.charts.load('current', {'packages':['corechart']});
+$.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vTNT_nKdZORVE1L2G23wBHl4xf0jQxA4afXlqcDUavX-xdyJEn6p8IAav-mVsYMqKCfZeGZ4zbqs269/pub?gid=1615151991&single=true&output=csv")
+  .done(function(result){
+    // console.log(result.split(","));
+    const importedData = result.split(",")
+    importedData[1] = Number(importedData[1])
+    importedData[2] = Number(importedData[2])
+    importedData[3] = Number(importedData[3])
+    importedData[4] = Number(importedData[4])
+    importedData[5] = Number(importedData[5])
+    importedData[6] = Number(importedData[6])
+    importedData[7] = ''
+    console.log(importedData);
 
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.charts.setOnLoadCallback(drawChart);
+    
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+    
+        // Set a callback to run when the Google Visualization API is loaded.
+        google.charts.setOnLoadCallback(drawChart);
+    
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+        function drawChart() {
+    
+          // Create the data table.
+    
+          var data = google.visualization.arrayToDataTable([
+            ['Month', 'Job Applications', 'Contacts Messaged', 'Resumé Views', 'Calendly Appointments', 'Emails Received',
+             'Offers', { role: 'annotation' } ],
+             importedData,
+            ['April', 0, 0, 0, 0, 0, 0, ''],
+            ['May', 0, 0, 0, 0, 0, 0, '']
+          ]);
+    
+    
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                           { calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           2]);
+    
+          // Set chart options
+          var options = {
+            title: "Dan's Job Search Progress",
+            width: 1000,
+            height: 800,
+            bar: {groupWidth: "95%"},
+            legend: {position: 'top', maxLines: 3},
+            isStacked: "true",
+            colors: ['#0f6d76', '#85c4be', '#eef6f9', '#feddd3', '#e0957b', "black"]
+          };
+    
+          // Instantiate and draw our chart, passing in some options.
+          var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+        }
 
-    // Callback that creates and populates a data table,
-    // instantiates the pie chart, passes in the data and
-    // draws it.
-    function drawChart() {
-
-      // Create the data table.
-
-      var data = google.visualization.arrayToDataTable([
-        ['Month', 'Job Applications', 'Contacts Messaged', 'Resumé Views', 'Calendly Appointments', 'Emails Received',
-         'Offers', { role: 'annotation' } ],
-        ['March', 14, 4, 3, 1, 1, 0, ''],
-        ['April', 0, 0, 0, 0, 0, 0, ''],
-        ['May', 0, 0, 0, 0, 0, 0, '']
-      ]);
 
 
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
+  })
 
-      // Set chart options
-      var options = {
-        title: "Dan's Job Search Progress",
-        width: 1000,
-        height: 800,
-        bar: {groupWidth: "95%"},
-        legend: {position: 'top', maxLines: 3},
-        isStacked: "true",
-        colors: ['#0f6d76', '#85c4be', '#eef6f9', '#feddd3', '#e0957b', "black"]
-      };
 
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
   </script>
 
 <script type="application/javascript">
