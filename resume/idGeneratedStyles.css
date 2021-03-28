@@ -492,3 +492,6 @@ header {
 .introjs-bullets ul li a.active {
 	background: blue;
 }
+.introjs-nextbutton {
+	background-color: honeydew;
+}
