@@ -488,3 +488,7 @@ header {
 
 	@page { size: auto;  margin: 0mm; }
 }
+
+.introjs-bullets ul li a.active {
+	background: blue;
+}
