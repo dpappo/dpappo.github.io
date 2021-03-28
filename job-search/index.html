@@ -4,7 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chart Testing</title>
+  <title>Charting for Job Search</title>
+  
+  <meta property="og:title" content="Charting Dan Pappo's Job Search" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://danpappo.com/job-search/" />
+  <meta property="og:site_name" content="Dan Pappo [.com]"/>
+  <meta name="Description" content="Dan is a data-nerd, no doubt about it. He naturally wanted to track how his job search went, and found opportunity to generate graphs with his live data. Enjoy!">
+
+  
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
   <script>window.LogRocket && window.LogRocket.init('ztgzix/job-search');</script>
@@ -45,7 +53,7 @@ $.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vTNT_nKdZORVE1L2G23wBHl4
           // Create the data table.
     
           var data = google.visualization.arrayToDataTable([
-            ['Month', 'Job Applications', 'Contacts Messaged', 'Resumé Views', 'Interviews', 'Emails Received',
+            ['Month', 'Job Applications', 'Contacts Messaged', 'Resumé Views', 'Emails Received', 'Interviews',
              'Offers', { role: 'annotation' } ],
              importedData,
             ['April', 0, 0, 0, 0, 0, 0, ''],
