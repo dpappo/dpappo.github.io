@@ -31,14 +31,18 @@ div.right-column.Tweeter {
 input.work {
   font-size: 2em;
   margin-right: 7%;
-  padding-left: 7%;
-  padding-right: 7%;
+  /* padding-left: 7%;
+  padding-right: 7%; */
+  padding-left: 45px;
+  padding-right: 45px;
   
 }
 input.contact {
   font-size: 2em;
-  padding-left: 7%;
-  padding-right: 7%;
+  /* padding-left: 7%;
+  padding-right: 7%; */
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 p {
@@ -206,11 +210,11 @@ img.project-image {
   }
 
   input.work {
-    font-size: 1em;
+    font-size: 1.5em;
     /* margin-right: 7%; */
   }
   input.contact {
-    font-size: 1em;
+    font-size: 1.5em;
     
   }
 
