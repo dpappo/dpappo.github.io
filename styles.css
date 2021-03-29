@@ -31,9 +31,14 @@ div.right-column.Tweeter {
 input.work {
   font-size: 2em;
   margin-right: 7%;
+  padding-left: 7%;
+  padding-right: 7%;
+  
 }
 input.contact {
   font-size: 2em;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 p {
@@ -84,6 +89,7 @@ h2.subtitle{
   font-size: 3em;
   margin-bottom: 10%;
   margin-right: 5%;
+  margin-top: 3%;
 }
 
 input{
@@ -131,6 +137,7 @@ input.contact{
   -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
+
 
 }
 input.contact:hover{
@@ -200,10 +207,11 @@ img.project-image {
 
   input.work {
     font-size: 1em;
-    margin-right: 7%;
+    /* margin-right: 7%; */
   }
   input.contact {
     font-size: 1em;
+    
   }
 
   img.project-image {
@@ -295,6 +303,7 @@ appearance: none;
 -moz-appearance: none;
 appearance: none;
 
+
   }
   input.work:hover{
     color:#E0957B;
@@ -309,6 +318,7 @@ appearance: none;
     -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
+
 
   }
   input.contact:hover{
@@ -371,6 +381,7 @@ appearance: none;
   }
   input.contact {
     font-size: 1.2em;
+    
   }
 
   div.left-column.Tweeter{
@@ -486,6 +497,7 @@ appearance: none;
     -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
+
 
   }
   input.contact:hover{
@@ -635,6 +647,7 @@ appearance: none;
       -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    
     
     }
     input.contact:hover{
