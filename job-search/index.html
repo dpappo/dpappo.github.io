@@ -28,16 +28,17 @@
 
 $.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vTNT_nKdZORVE1L2G23wBHl4xf0jQxA4afXlqcDUavX-xdyJEn6p8IAav-mVsYMqKCfZeGZ4zbqs269/pub?gid=1615151991&single=true&output=csv")
   .done(function(result){
+    console.log('result: ', result)
     // console.log(result.split(","));
-    const importedData = result.split(",")
-    importedData[1] = Number(importedData[1])
-    importedData[2] = Number(importedData[2])
-    importedData[3] = Number(importedData[3])
-    importedData[4] = Number(importedData[4])
-    importedData[5] = Number(importedData[5])
-    importedData[6] = Number(importedData[6])
-    importedData[7] = ''
-    console.log(importedData);
+    const april = result.split(",")
+    april[1] = Number(april[1])
+    april[2] = Number(april[2])
+    april[3] = Number(april[3])
+    april[4] = Number(april[4])
+    april[5] = Number(april[5])
+    april[6] = Number(april[6])
+    april[7] = ''
+    console.log("april: ", april);
 
     
         // Load the Visualization API and the corechart package.
@@ -56,8 +57,8 @@ $.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vTNT_nKdZORVE1L2G23wBHl4
           var data = google.visualization.arrayToDataTable([
             ['Month', 'Job Applications', 'Contacts Messaged', 'Resumé Views', 'Emails Received', 'Interviews',
              'Offers', { role: 'annotation' } ],
-             importedData,
-            ['April', 0, 0, 0, 0, 0, 0, ''],
+             ["March", 36, 4, 18, 3, 1, 0, ""],
+            april,
             ['May', 0, 0, 0, 0, 0, 0, '']
           ]);
     
