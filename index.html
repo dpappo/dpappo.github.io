@@ -1,187 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>  
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>.async-hide { opacity: 0 !important} </style>
-      
-      <!-- antiflicker -->
-      <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-      })(window,document.documentElement,'async-hide','dataLayer',4000,
-      {'OPT-P6HLJXC':true});</script>
-      <link rel="stylesheet" href="styles.css">
-      <link rel="icon" type="image/ico" href="http://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2015-01-22/f78bc6737ffceffacd3c0b0a35bce6a5.ico"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:ital,wght@0,100;0,400;0,700;1,900&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-      <script src="https://www.googleoptimize.com/optimize.js?id=OPT-P6HLJXC"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./transfonter.org-20210421-131216/stylesheet.css">
+  <title>Dan Pappo .com</title>
+</head>
+<body>
+  
+  <h1>Dan Pappo.com</h1>
+  <canvas id="field">
+  </canvas>
+  
 
-      <meta property="og:title" content="Dan Pappo's Website" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://danpappo.com/" />
-      <meta property="og:image" content="/images/main.webp" />
-      <meta property="og:site_name" content="Dan Pappo [.com]"/>
-      <meta name="Description" content="Hi, I'm Dan. I am a mission-driven creator, optimizer, and technologist. I take a data-driven and user-oriented approach when faced with new problems. Above all else, I have a get-stuff-done attitude, and enthusiasm for getting my hands dirty.">
+  <script>
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
 
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
 
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
 
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93477758-2"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+var field = document.getElementById("field");
+var f = field.getContext("2d");
 
-        gtag('config', 'UA-93477758-2');
-      </script>
-
-    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>window.LogRocket && window.LogRocket.init('ztgzix/landing-page-kr9o5');</script>
-    <title>Dan Pappo [.com]</title>
-  </head>
-  <body>
-
-    <div class="section-container">
-      
-    <div class="section" id="card">
-  <div class="container">
-    <div class="left-column">
-    <div class="text">
-      <h1 class="title">Hi, I'm Dan</h1>
-      <h2 class="subtitle">I'm working on improving health with tech</h2>
-    </div>
-    <div class="form">
-      <form action="#Alfresco">
-        <input class="work" type="button" onclick="window.location.href='#Alfresco'" value="Projects" />
-        </form>
-        
-        <form method="get" action="resume" target="_blank">
-          <input class="contact" type="submit" value="Resumé"/>
-        </form>
-      </a>
-    </div>
-  </div>
-  <div class="right-column">
-    <div class="photo">
-    </div>
-  </div>
-  </div>
-</div>
-
-    <div class="section" id="Alfresco">
-  <div class="container project-container" id="Alfresco-container">
-    <div class="left-column Alfresco">
-    <div class="text">
-      <h1 class="title" id="Alfresco">Alfresco</h1>
-      <p class="subtitle Alfresco">A map-app where you can find and share the best outdoor dining spots. 
-        <br>
-        <br>
-        Built under a week with two colleagues; I lead planning, daily stand-ups, work prioritization, and also map, marker and API query functionality.
-        <br>
-        <br>
-        
-        Sass, jQuery, PostgreSQL, Node, Leaflet JS, Express, Bootstrap
-        
-        </h2>
-    </div>
-    <div class="form">
-      <form action="alfresco-feedback" target="_blank">
-        <input class="work" type="submit" value="Peer feedback" />
-        </form>
-        
-        <form method="get" action="https://alfresco-map.herokuapp.com/" target="_blank">
-          <input class="contact" type="submit" value="Live site"/>
-        </form>
-      </a>
-    </div>
-  </div>
-  <div class="right-column Alfresco">
-   
-    <a href="https://alfresco-map.herokuapp.com/" target="_blank">
-      <img loading=lazy class="project-image" src="./images/alfresco.webp" alt="Alfresco App Landing Page">
-    </a>
-
-  </div>
-  </div>
-</div>
+var stars = {};
+var starIndex = 0;
+var numStars = 0;
+var acceleration = 1;
+var starsToDraw = (field.width * field.height) / 200;
+if (getUrlParameter("stars")) {
+  starsToDraw = getUrlParameter("stars");
+}
+if (getUrlParameter("accel")) {
+  acceleration = getUrlParameter("accel");
+} 
 
 
+function Star() {
+    this.X = field.width / 2;
+    this.Y = field.height / 2;
 
-<div class="section full-page" id="Tweeter">
-  <div class="container project-container" id="Tweeter-container">
-    <div class="left-column Tweeter">
-      <a href="http://tweeter.danpappo.com/" target="_blank">
-        <img loading=lazy class="project-image" id="Tweeter-image" src="./images/tweeter.webp" alt="Tweeter App Landing Page">
-      </a>
-    </div>
-    <div class="right-column Tweeter">
-    <div class="text Tweeter">
-      <h1 class="title" id="Tweeter">Tweeter</h1>
-      <p class="subtitle Tweeter">A stylish and dynamic Twitter clone, this solo project was a fun way to express user oriented UI and UX. This app features responsive desktop and mobile layouts, cohesive use of colour and space, and a smooth user experience.
-<br>
-<br>
-        CSS, jQuery, Node, Express, Moment JS
+    this.SX = Math.random() * 10 - 5;
+    this.SY = Math.random() * 10 - 5;
 
-        </h2>
-    </div>
-    <div class="form">
-      <form action="https://github.com/dpappo/tweeter/" target="_blank">
-        <input class="work" type="submit" value="GitHub Repo" />
-        </form>
-        
-        <form method="get" action="http://tweeter.danpappo.com/" target="_blank">
-          <input class="contact" type="submit" value="Live Site"/>
-        </form>
-      </a>
-    </div>
-   
+    var start = 0;
 
+    if (field.width > field.height)
+        start = field.width;
+    else
+        start = field.height;
 
-  </div>
-  </div>
-</div>
+    this.X += this.SX * start / 10;
+    this.Y += this.SY * start / 10;
 
-<div class="section" id="get-in-touch">
-  <div class="container">
-    <div class="left-column">
-    <div class="text">
-      <h2 class="subtitle">Learn more about me by reading my resumé, or book a time to get in touch.</h2>
-    </div>
-    <div class="form">
-      <form action="resume">
-        <input class="work" type="submit" value="Resumé" />
-        </form>
-        
-        <form method="get" action="https://calendly.com/dpappo/introduction" target="_blank">
-          <input class="contact" type="submit" value="Book a time"/>
-        </form>
-      </a>
-    </div>
-  </div>
-  <div class="right-column">
-    <div class="photo-end">
-    </div>
-  </div>
-  </div>
-</div>
+    this.W = 1;
+    this.H = 1;
 
+    this.age = 0;
+    this.dies = 500;
 
+    starIndex++;
+    stars[starIndex] = this;
 
-</div>
+    this.ID = starIndex;
+    this.C = "#ffffff";
+}
 
-<script type="application/javascript">
-  function getIP(json) {
-    LogRocket.identify(json.ip)
-  }
-</script>
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+Star.prototype.Draw = function () {
+    this.X += this.SX;
+    this.Y += this.SY
+    
+    this.SX += this.SX / (50 / acceleration);
+  	this.SY += this.SY / (50 / acceleration);
+
+    this.age++;
+
+    if (this.age == Math.floor(50 / acceleration) | this.age == Math.floor(150 / acceleration) | this.age == Math.floor(300 / acceleration)) {
+        this.W++;
+        this.H++;
+    }
+
+    if (this.X + this.W < 0 | this.X > field.width |
+        this.Y + this.H < 0 | this.Y > field.height)
+      {
+        delete stars[this.ID];
+        numStars--;
+			}
+  
+    f.fillStyle = this.C;
+    f.fillRect(this.X, this.Y, this.W, this.H);
+}
+
+field.width = window.innerWidth;
+field.height = window.innerHeight;
+
+function draw() {
+  	if (field.width != window.innerWidth)
+      	field.width = window.innerWidth;
+  	if (field.height != window.innerHeight)
+      	field.height = window.innerHeight;
+  
+  	// Play with the "a" value to create streams...it's fun!
+    f.fillStyle = "rgba(0, 0, 0, 0.8)";
+    f.fillRect(0, 0, field.width, field.height);
+
+    for (var i = numStars; i < starsToDraw; i++) {
+        new Star();
+        numStars++;
+    }
+
+    for (var star in stars) {
+        stars[star].Draw();
+    }
+}
+
+// Original timing of the screensaver
+setInterval(draw, 40);
+
+  </script>
 </body>
 </html>

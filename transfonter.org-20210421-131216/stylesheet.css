@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Krupper';
+    src: url('Krupper.eot');
+    src: url('Krupper.eot?#iefix') format('embedded-opentype'),
+        url('Krupper.woff2') format('woff2'),
+        url('Krupper.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
