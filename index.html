@@ -1,158 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="./transfonter.org-20210421-131216/stylesheet.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93477758-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="./transfonter.org-20210421-131216/stylesheet.css"
+    />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-93477758-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'UA-93477758-2');
-  </script>
+      gtag("config", "UA-93477758-2");
+    </script>
 
-<script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossorigin="anonymous"></script>
-<script>window.LogRocket && window.LogRocket.init('ztgzix/landing-page-kr9o5');</script>
+    <script
+      src="https://cdn.lr-ingest.io/LogRocket.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.LogRocket && window.LogRocket.init("ztgzix/landing-page-kr9o5");
+    </script>
 
-  <title>Dan Pappo .com</title>
-</head>
-<body>
-  
-  <h1 ><span onclick="play()">Dan Pappo.com</span></h1>
-  <canvas id="field">
-  </canvas>
-  <audio id="audio"><source src="./Star Trek The Next Generation - End Credit.mp3" type="audio/mp3"></audio>
+    <title>Dan Pappo .com</title>
+  </head>
+  <body>
+    <h1>
+      Warp Factor:
+      <input type="range" id="warp-range" value="10" class="range-style" />
+      <br />
+      <br />
+      <button class="kave-btn" onclick="update()">
+        <span class="kave-line">Engage!</span>
+      </button>
 
-  <script>
-    function play() {
+      <div id="block"></div>
+
+      <span onclick="togglePlay()"> DAN PAPPO.com</span>
+    </h1>
+    <canvas id="field"> </canvas>
+    <audio id="audio">
+      <source
+        src="./Star Trek The Next Generation - End Credit.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <script>
+      function update() {
+        acceleration = document.getElementById("warp-range").value / 10;
+      }
+    </script>
+
+    <script>
       var audio = document.getElementById("audio");
-      audio.play();
-    }
-  </script>
+      var isPlaying = false;
 
-  <script>
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+      function togglePlay() {
+        isPlaying ? audio.pause() : audio.play();
+      }
 
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
+      audio.onplaying = function () {
+        isPlaying = true;
+      };
+      audio.onpause = function () {
+        isPlaying = false;
+      };
+    </script>
 
-        if (sParameterName[0] === sParam) {
+    <script>
+      var getUrlParameter = function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+          sURLVariables = sPageURL.split("&"),
+          sParameterName,
+          i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+          sParameterName = sURLVariables[i].split("=");
+
+          if (sParameterName[0] === sParam) {
             return sParameterName[1] === undefined ? true : sParameterName[1];
+          }
         }
-    }
-};
+      };
 
-var field = document.getElementById("field");
-var f = field.getContext("2d");
+      var field = document.getElementById("field");
+      var f = field.getContext("2d");
 
-var stars = {};
-var starIndex = 0;
-var numStars = 0;
-var acceleration = 1;
-var starsToDraw = (field.width * field.height) / 200;
-if (getUrlParameter("stars")) {
-  starsToDraw = getUrlParameter("stars");
-}
-if (getUrlParameter("accel")) {
-  acceleration = getUrlParameter("accel");
-} 
+      var stars = {};
+      var starIndex = 0;
+      var numStars = 0;
+      var acceleration = 1;
+      var starsToDraw = (field.width * field.height) / 200;
+      if (getUrlParameter("stars")) {
+        starsToDraw = getUrlParameter("stars");
+      }
+      if (getUrlParameter("accel")) {
+        acceleration = getUrlParameter("accel");
+      }
 
+      function Star() {
+        this.X = field.width / 2;
+        this.Y = field.height / 2;
 
-function Star() {
-    this.X = field.width / 2;
-    this.Y = field.height / 2;
+        this.SX = Math.random() * 10 - 5;
+        this.SY = Math.random() * 10 - 5;
 
-    this.SX = Math.random() * 10 - 5;
-    this.SY = Math.random() * 10 - 5;
+        var start = 0;
 
-    var start = 0;
+        if (field.width > field.height) start = field.width;
+        else start = field.height;
 
-    if (field.width > field.height)
-        start = field.width;
-    else
-        start = field.height;
+        this.X += (this.SX * start) / 10;
+        this.Y += (this.SY * start) / 10;
 
-    this.X += this.SX * start / 10;
-    this.Y += this.SY * start / 10;
+        this.W = 1;
+        this.H = 1;
 
-    this.W = 1;
-    this.H = 1;
+        this.age = 0;
+        this.dies = 500;
 
-    this.age = 0;
-    this.dies = 500;
+        starIndex++;
+        stars[starIndex] = this;
 
-    starIndex++;
-    stars[starIndex] = this;
+        this.ID = starIndex;
+        this.C = "#ffffff";
+      }
 
-    this.ID = starIndex;
-    this.C = "#ffffff";
-}
+      Star.prototype.Draw = function () {
+        this.X += this.SX;
+        this.Y += this.SY;
 
-Star.prototype.Draw = function () {
-    this.X += this.SX;
-    this.Y += this.SY
-    
-    this.SX += this.SX / (50 / acceleration);
-  	this.SY += this.SY / (50 / acceleration);
+        this.SX += this.SX / (50 / acceleration);
+        this.SY += this.SY / (50 / acceleration);
 
-    this.age++;
+        this.age++;
 
-    if (this.age == Math.floor(50 / acceleration) | this.age == Math.floor(150 / acceleration) | this.age == Math.floor(300 / acceleration)) {
-        this.W++;
-        this.H++;
-    }
+        if (
+          (this.age == Math.floor(50 / acceleration)) |
+          (this.age == Math.floor(150 / acceleration)) |
+          (this.age == Math.floor(300 / acceleration))
+        ) {
+          this.W++;
+          this.H++;
+        }
 
-    if (this.X + this.W < 0 | this.X > field.width |
-        this.Y + this.H < 0 | this.Y > field.height)
-      {
-        delete stars[this.ID];
-        numStars--;
-			}
-  
-    f.fillStyle = this.C;
-    f.fillRect(this.X, this.Y, this.W, this.H);
-}
+        if (
+          (this.X + this.W < 0) |
+          (this.X > field.width) |
+          (this.Y + this.H < 0) |
+          (this.Y > field.height)
+        ) {
+          delete stars[this.ID];
+          numStars--;
+        }
 
-field.width = window.innerWidth;
-field.height = window.innerHeight;
+        f.fillStyle = this.C;
+        f.fillRect(this.X, this.Y, this.W, this.H);
+      };
 
-function draw() {
-  	if (field.width != window.innerWidth)
-      	field.width = window.innerWidth;
-  	if (field.height != window.innerHeight)
-      	field.height = window.innerHeight;
-  
-  	// Play with the "a" value to create streams...it's fun!
-    f.fillStyle = "rgba(0, 0, 0, 0.8)";
-    f.fillRect(0, 0, field.width, field.height);
+      field.width = window.innerWidth;
+      field.height = window.innerHeight;
 
-    for (var i = numStars; i < starsToDraw; i++) {
-        new Star();
-        numStars++;
-    }
+      function draw() {
+        if (field.width != window.innerWidth) field.width = window.innerWidth;
+        if (field.height != window.innerHeight)
+          field.height = window.innerHeight;
 
-    for (var star in stars) {
-        stars[star].Draw();
-    }
-}
+        // Play with the "a" value to create streams...it's fun!
+        f.fillStyle = "rgba(0, 0, 0, 0.8)";
+        f.fillRect(0, 0, field.width, field.height);
 
-// Original timing of the screensaver
-setInterval(draw, 40);
+        for (var i = numStars; i < starsToDraw; i++) {
+          new Star();
+          numStars++;
+        }
 
-  </script>
-  <script type="application/javascript">
-    function getIP(json) {
-      LogRocket.identify(json.ip)
-    }
-  </script>
-  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  
-</body>
+        for (var star in stars) {
+          stars[star].Draw();
+        }
+      }
+
+      // Original timing of the screensaver
+      setInterval(draw, 40);
+    </script>
+    <script type="application/javascript">
+      function getIP(json) {
+        LogRocket.identify(json.ip);
+      }
+    </script>
+    <script
+      type="application/javascript"
+      src="https://api.ipify.org?format=jsonp&callback=getIP"
+    ></script>
+  </body>
 </html>
