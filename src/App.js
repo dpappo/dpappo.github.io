@@ -73,9 +73,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1 id="one">Hi, my name is Dan</h1>
-      <h1 id="two">I saw these sunsets and liked them</h1>
-      <h1 id="three">I hope you enjoy them too</h1>
+      <h1 id="one">
+        {/* <a href="mailto:dpappo@gmail.com">dpappo@gmail.com</a> */}
+        {/* Hi, my name is Dan.
+        <p />
+        I saw these sunsets and liked them.
+        <p />I hope you enjoy them too. */}
+      </h1>
+      {/* <h1 id="two">I saw these sunsets and liked them</h1>
+      <h1 id="three">I hope you enjoy them too</h1> */}
       {itemList}
     </div>
   );

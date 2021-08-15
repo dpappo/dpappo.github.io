@@ -1,31 +1,35 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 img {
-  width: 100vw;
+  /* height: 100vw; */
+  width: 100%;
+  margin: -1px;
+  object-fit: contain;
 }
 
 h1 {
-  /* text-shadow: -1px 0 skyblue, 0 1px skyblue, 1px 0 skyblue, 0 -1px skyblue; */
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   color: black
 }
 
 h1#one {
   position: absolute;
-  top: 50vh;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 h1#two {
   position: absolute;
-  top: 190vh;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 h1#three {
   position: absolute;
-  top: 325vh;
+  top: 150%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
